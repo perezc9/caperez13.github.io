@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hello from JavaScript!</title>
+	<title> Hello from JavaScript! </title>
 </head>
 <body>
 	<script>
