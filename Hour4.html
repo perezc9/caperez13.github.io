@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fahrenheit From Celsius</title>
+	<script>
+		function volumeOfRoundChimney(r, h){
+			with (Math) {
+				var vol = PI * r * r * h;
+				ceil(vol);
+			}
+			return vol;
+		}
+	</script>
+</head>
+<body>
+	<script>
+		var radius = window.prompt("Enter Chimney's Radius: ");
+		var height = window.prompt("Enter Chimney's Height: ");
+		document.write("Volume of Chimney: " + volumeOfRoundChimney(radius, height) + " cubic meters");
+	</script>
+</body>
+</html>
