@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Hour 8 Assignment </title>
+	<script>
+		Date.prototype.getYesterday = function() {
+			var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+			var dayYesterday = this.getDay() - 1;
+			if(dayYesterday == -1){
+				dayYesterday = days.length + dayYesterday;	
+			}
+			return days[dayYesterday];
+		}
+	</script>
+</head>
+<body>
+	<script>
+		var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+		var months = ['January','Febuary','March','April','May','June','July', 'August', 'September', 'October', 'November', 'December'];
+		var currentDate = new Date();
+		var day = days[currentDate.getDay()];
+		var month = months[currentDate.getMonth()];	
+		var date = currentDate.getDate();
+		var year = currentDate.getFullYear();
+
+		document.write("Today's date is " + day + ", " + month + " " + date + ", " + year);
+		document.write("Yesterday was " + currentDate.getYesterday());
+	</script>
+</body>
+</html>
