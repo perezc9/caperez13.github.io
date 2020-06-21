@@ -10,13 +10,14 @@
 			}
 		function returnBodyComments() {
 			var bodyItems = document.getElementsByTagName("body");
-			var comments = "Hello";
-			alert("\n\n\n The comments are: \n" + comments);
+			var comments = "";
 			for (var i=0; i < bodyItems.childNodes.length; i++) {
-				if(bodyItems.childNodes[i].nodeType === 8)
+				if(bodyItems.childNodes[i].nodeType === 8){
 					comments += "\n" + bodyItems.childNodes[i].nodeValue + "\n";
+					alert("The comments are: \n" + comments);
+				}
 			}
-			
+			//alert("The comments are: \n" + comments);
 		} 
 		window.onload = returnBodyComments;
 	</script>
