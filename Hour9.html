@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Hour 9 sar Perez Assignment </title>
+	<title> Hour 9 ar Perez Assignment </title>
 	<script>
 		function countListItems() {
 			var olElement = document.getElementById("toDoList");
@@ -19,9 +19,9 @@
 					comments += "\n" + bodyItems.childNodes[i].nodeValue + "\n";
 				}
 			}
-			return comments;
+			document.alert("\n\n\n The comments are: \n" + comments);
 		} 
-		//window.onload = returnBodyComments;
+		window.onload = returnBodyComments;
 	</script>
 </head>
 <body>
@@ -40,9 +40,5 @@
 	<p id="toDoNotes">Make sure all these are completed by 8pm so you can
 watch the game on TV!</p>
 <!-- This is comment number 7 -->
-	<script>
-		var comments = returnBodyComments();
-		document.write("\n\n\n The comments are: \n" + comments);
-	</script>
 </body>
 </html>
