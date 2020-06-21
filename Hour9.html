@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Hour 9 r Perez Assignment </title>
+	<title> Hour 9 Perez Assignment </title>
 	<script>
 		function countListItems() {
 			var olElement = document.getElementById("toDoList");
@@ -11,17 +11,14 @@
 		function returnBodyComments() {
 			var bodyItems = document.getElementsByTagName("body");
 			var comments = "Hello";
+			alert("\n\n\n The comments are: \n" + comments);
 			for (var i=0; i < bodyItems.childNodes.length; i++) {
-				if(bodyItems.childNodes[i].nodeType === 8)// &&
-					//bodyItems.childNodes[i].nodeType.indexOf("/*") >= 0 &&
-					//bodyItems.childNodes[i].nodeType.indexOf("*/") >= 0) 
-					{
+				if(bodyItems.childNodes[i].nodeType === 8)
 					comments += "\n" + bodyItems.childNodes[i].nodeValue + "\n";
-				}
 			}
-			document.alert("\n\n\n The comments are: \n" + comments);
+			
 		} 
-		window.onload = countListItems;
+		window.onload = returnBodyComments;
 	</script>
 </head>
 <body>
