@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Hour 9 P Assignment </title>
+	<title> Hour 9 Assignment </title>
 	<script>
 		function countListItems() {
 			var olElement = document.getElementById("toDoList");
@@ -11,14 +11,11 @@
 		function bodyComments(){
 			var bodyItems = document.getElementsByTagName("body")[0];
 			var comments = "";
-			var index = "";
-			for (var i=0; i < bodyItems.childNodes.length; i++) {
-				index += " " + bodyItems.childNodes[i].nodeType;
-				if(bodyItems.childNodes[i].nodeType === 8){
+			for(var i=0; i < bodyItems.childNodes.length; i++) {
+				if(bodyItems.childNodes[i].nodeType === 8)
 					comments += "\n" + bodyItems.childNodes[i].nodeValue + "\n";
-				}
 			}
-			alert(index + "The comments are (7 total): \n" + comments);
+			alert("The comments are (7 total): \n" + comments);
 		} 
 		window.onload = bodyComments;
 	</script>
@@ -27,17 +24,16 @@
 	<!-- This is comment number 1 -->
 	<h1>Things To Do</h1>
 	<!-- This is comment number 2 -->
-	<ol id="toDoList">
 	<!-- This is comment number 3 -->
+	<ol id="toDoList">
 		<li>Mow the lawn</li>
-	<!-- This is comment number 4 -->
 		<li>Clean the windows</li>
-	<!-- This is comment number 5 -->
 		<li>Answer your email</li>
 	</ol>
+	<!-- This is comment number 4 -->
+	<!-- This is comment number 5 -->
 	<!-- This is comment number 6 -->
-	<p id="toDoNotes">Make sure all these are completed by 8pm so you can
-watch the game on TV!</p>
+	<p id="toDoNotes">Make sure all these are completed by 8pm so you can watch the game on TV!</p>
 <!-- This is comment number 7 -->
 </body>
 </html>
