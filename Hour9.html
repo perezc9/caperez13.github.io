@@ -11,6 +11,7 @@
 		function returnBodyComments() {
 			var bodyItems = document.getElementsByTagName("body");
 			var comments = "";
+			write("the num is: " + bodyItems.childNodes.length);
 			for (var i=0; i < bodyItems.childNodes.length; i++) {
 				if(bodyItems.childNodes[i].nodeType === 8){
 					comments += "\n" + bodyItems.childNodes[i].nodeValue + "\n";
