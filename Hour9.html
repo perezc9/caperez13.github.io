@@ -4,16 +4,15 @@
 	<title> Hour 9 ial Assignment </title>
 	<script>
 		function bodyComments(){
-			var bodyItems = document.getElementsByTagName("body");
-			//var comments = "";
-			alert("the num is: "); //+ bodyItems.childNodes.length);
-			/*for (var i=0; i < bodyItems.childNodes.length; i++) {
+			var bodyItems = document.getElementsByTagName("BODY");
+			var comments = "";
+			for (var i=0; i < bodyItems.childNodes.length; i++) {
 				if(bodyItems.childNodes[i].nodeType === 8){
 					comments += "\n" + bodyItems.childNodes[i].nodeValue + "\n";
 					//alert("The comments are: \n" + comments);
 				}
 			}
-			//alert("The comments are: \n" + comments);*/
+			alert("The comments are: \n" + comments);
 		} 
 		window.onload = bodyComments;
 	</script>
