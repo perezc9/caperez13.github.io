@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Hour 9 al Assignment </title>
+	<title> Hour 9 l Assignment </title>
 	<script>
 		function bodyComments(){
 			var bodyItems = document.getElementsByTagName("BODY");
 			var comments = "";
 			for (var i=0; i < bodyItems.childNodes.length; i++) {
 				if(bodyItems.childNodes[i].nodeType === 8){
-					comments += "\n" + bodyItems.childNodes[i].nodeValue + "\n";
-					//alert("The comments are: \n" + comments);
+					comments += bodyItems.childNodes[i].nodeValue;
 				}
 			}
 			alert("The comments are: \n" + comments);
