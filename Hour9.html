@@ -13,6 +13,7 @@
 			var comments = "The comments are: \n";
 			for (var i=0; i < bodyItems.childNodes.length; i++) {
 				if(bodyItems.childNodes[i].nodeType == 3) {
+					if(bodyItems.childNodes[i].nodeValue[0] != "/") continue;
 					comments += "\n" + bodyItems.childNodes[i].nodeValue + "\n";
 				}
 			}
