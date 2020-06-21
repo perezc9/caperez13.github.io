@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Hour 9 l Assignment </title>
+	<title> Hour 9 Assignment </title>
 	<script>
 		function bodyComments(){
-			var bodyItems = document.getElementsByTagName("BODY");
+			var bodyItems = document.getElementsByTagName("body")[0];
 			var comments = "";
 			for (var i=0; i < bodyItems.childNodes.length; i++) {
 				if(bodyItems.childNodes[i].nodeType === 8){
-					comments += bodyItems.childNodes[i].nodeValue;
+					comments += "\n" + bodyItems.childNodes[i].nodeValue + "\n";
 				}
 			}
-			alert("The comments are: \n" + comments);
+			alert("The comments are (7 total): \n" + comments);
 		} 
 		window.onload = bodyComments;
 	</script>
