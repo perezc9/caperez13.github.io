@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Hour 9 ar Perez Assignment </title>
+	<title> Hour 9 r Perez Assignment </title>
 	<script>
 		function countListItems() {
 			var olElement = document.getElementById("toDoList");
 			var listItems = olElement.getElementsByTagName("li");
 			alert("The ordered list contains " + listItems.length + "items");
 			}
-		function returnBodyComments(){
+		function returnBodyComments() {
 			var bodyItems = document.getElementsByTagName("body");
 			var comments = "Hello";
 			for (var i=0; i < bodyItems.childNodes.length; i++) {
@@ -21,7 +21,7 @@
 			}
 			document.alert("\n\n\n The comments are: \n" + comments);
 		} 
-		window.onload = returnBodyComments;
+		window.onload = countListItems;
 	</script>
 </head>
 <body>
