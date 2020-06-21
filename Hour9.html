@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Hour 9 OOP Assignment </title>
+	<title> Hour 9 OP Assignment </title>
 	<script>
+		function countListItems() {
+			var olElement = document.getElementById("toDoList");
+			var listItems = olElement.getElementsByTagName("li");
+			alert("The ordered list contains " + listItems.length + "items");
+		}
 		function bodyComments(){
 			var bodyItems = document.getElementsByTagName("body")[0];
 			var comments = "";
-			for 
 			for (var i=0; i < bodyItems.childNodes.length; i++) {
 				if(bodyItems.childNodes[i].nodeType === 8){
 					comments += "\n" + bodyItems.childNodes[i].nodeValue + "\n";
