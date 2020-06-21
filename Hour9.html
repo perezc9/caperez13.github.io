@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Hour 9 poodle Assignment </title>
+	<title> Hour 9 oodle Assignment </title>
 	<script>
 		function countListItems() {
 			var olElement = document.getElementById("toDoList");
@@ -12,11 +12,11 @@
 			var bodyItems = document.getElementsByTagName("body");
 			var comments = "The comments are: \n";
 			for (var i=0; i < bodyItems.childNodes.length; i++) {
-				if(bodyItems.childNodes[i].nodeType === 8)// &&
+				if(bodyItems.childNodes[i].nodeType == 8)// &&
 					//bodyItems.childNodes[i].nodeType.indexOf("/*") >= 0 &&
 					//bodyItems.childNodes[i].nodeType.indexOf("*/") >= 0) 
 					{
-					comments += "\n" + bodyItems.childNodes[i].nodeValue + "\n";
+					comments += "\n" + bodyItems.childNodes[i].nodeValue + "\n Hello 1";
 				}
 			}
 			alert(comments);
