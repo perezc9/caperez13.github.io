@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Hour 9 Assignment </title>
+	<script>
+		function capitalize(str){
+			var newArray = str.split(" ");
+			var capArray = newArray.map(cap);
+			return capArray.join(" ");
+		}
+
+		function cap(str, strIndex, strArray)
+		{
+			return str.replace(str[0], str[0].toUpperCase());
+		}
+	</script>
+</head>
+<body>
+	<script>
+		var userString = window.prompt("Please Enter A String ");
+		document.write("Capitalized String: " + capitalize(userString));
+	</script>
+</body>
+</html>
