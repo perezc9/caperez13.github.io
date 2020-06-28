@@ -1,25 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Switching stylesheets with JavaScript</title>
-	<style title="sheet1">
-		body {
-			background-color: white;
-			color: red;
-		}
-	</style>
-	<style title="sheet2">
-		body {
-			background-color: black;
-			color: yellow;
-			}
-	</style>
-	<style title="sheet3">
-		body {
-			background-color: pink;
-			color: green;
-			}
-	</style>
+	<title>Hour 12 Assignment</title>
+	<link rel="stylesheet" type="text/css" href="Hour12_style.css" />
 	<script>
 			function ssEnable(mySheet) {
 				var change = false;
@@ -40,8 +23,8 @@
 			function sheet() {
 				var sheetName = prompt("Stylesheet Name?");
 				if(!ssEnable(sheetName)) alert("Not found - original stylesheet retained.");
-				}
-				window.onload = function() {
+			}
+			window.onload = function() {
 				document.getElementById("btn1").onclick = sheet;
 			}
 	</script>
