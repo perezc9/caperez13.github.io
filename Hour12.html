@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hour 12 KI Assignment</title>
+	<title>Hour 12 I Assignment</title>
 	<link rel="stylesheet" type="text/css" href="Hour12_style.css" />
 	<script>
 			function ssEnable(mySheet) {
 				var sheets = ["sheet1", "sheet2", "sheet3"]
 				var change = false;
 				var oldSheet = document.getElementsByTagName("body")[0].id;
-				document.write(oldSheet);
+				//document.write(oldSheet);
 				document.getElementById(oldSheet).id = "sheet1";
-				oldSheet = document.getElementsByTagName("body")[0].id;
-				document.write(oldSheet);
+				location.reload();
+				//oldSheet = document.getElementsByTagName("body")[0].id;
+				//document.write(oldSheet);
 
 				/*for (var i = 0; i < document.styleSheets.length; i++) {
 				if(document.styleSheets[i].disabled == false) {
