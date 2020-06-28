@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="Hour12_style.css" />
-	<title>Hour 12 SAR PEREZ Assignment</title>
-	<script>/*
+	<link rel="stylesheet" type="text/css" title="sheet1" href="Hour12_style1.css" />
+	<link rel="stylesheet" type="text/css" title="sheet2" href="Hour12_style2.css" />
+	<link rel="stylesheet" type="text/css" title="sheet3" href="Hour12_style3.css" />
+	<title>Hour 12 PEREZ Assignment</title>
+	<script>
 			function ssEnable(mySheet) {
-				var sheets = ["sheet1", "sheet2", "sheet3"]
 				var change = false;
-				var oldSheet = document.getElementsByTagName("body")[0].id;
-				//document.write(oldSheet);
-				document.getElementById(oldSheet).id = "sheet1";
-				location.reload();
-				//oldSheet = document.getElementsByTagName("body")[0].id;
-				//document.write(oldSheet);
+				var oldSheet = 0;
 
 				for (var i = 0; i < document.styleSheets.length; i++) {
 				if(document.styleSheets[i].disabled == false) {
@@ -34,10 +30,10 @@
 			window.onload = function() {
 				document.getElementById("btn1").onclick = sheet;
 			}
-	*/</script>
+	</script>
 </head>
-<body id = "sheet3">
+<body>
 	Switch my stylesheet with the button below!<br />
-	//<input type="button" id="btn1" value="Change Sheet" />
+	<input type="button" id="btn1" value="Change Sheet" />
 </body>
 </html>
