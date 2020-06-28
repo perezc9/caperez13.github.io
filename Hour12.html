@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hour 12 NICKI Assignment</title>
+	<title>Hour 12 ICKI Assignment</title>
 	<link rel="stylesheet" type="text/css" href="Hour12_style.css" />
 	<script>
 			function ssEnable(mySheet) {
+				var sheets = ["sheet1", "sheet2", "sheet3"]
 				var change = false;
-				var oldSheet = 0;
+				var oldSheet = document.getElementsByTagName("body")[0].id;
+				document.write(oldSheet);
 				for (var i = 0; i < document.styleSheets.length; i++) {
 				if(document.styleSheets[i].disabled == false) {
 					oldSheet = i;
