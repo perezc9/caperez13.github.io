@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Hour 13 Assignment </title>
+	<title>Animating a DOM Element</title>
+	<style>
+		#div1 {
+			width: 200px;
+            height: 280px;
+			text-align: center;
+			background: black;
+			color: white;
+			border-bottom-left-radius: 150px 200px;
+            border-bottom-right-radius: 150px 200px;
+			border-top-left-radius: 150px 200px;
+            border-top-right-radius: 150px 200px;
+			}
+         #div2 {
+			width: 200px;
+            height: 200px;
+			text-align: center;
+			background: green;
+			color: white;
+			border-bottom-left-radius: 200px 200px;
+            border-bottom-right-radius: 200px 200px;
+			border-top-left-radius: 200px 200px;
+            border-top-right-radius: 200px 200px;
+			}
+	</style>
 	<script>
-		var myObject = new Object();
-		myObject.days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-		myObject.months = ['January','Febuary','March','April','May','June','July', 'August', 'September', 'October', 'November', 'December'];
-		myObject.firstName = "Cesar";
-		myObject.lastName = "Perez";
-		myObject.age = 20;
-		myObject.sex = "male";
-		myObject.city = "Los Angeles";
-		myObject.state = "California";
-		myObject.college = "College of the Canyons";
-
-		document.write("First Object Test: " + JSON.stringify(myObject));
-        
-		document.write("\n\n\n");
-        
-		function mySecondTestObject() {
-			this.primaryColors = ['red', 'blue', 'yellow'];
-			this.secondaryColors = ['purple', 'green', 'orange'];
-			this.randomColors = ['pink', 'black', 'white', 'grey', 'baige'];
-			this.numbers =[0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-			this.upperLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-		}
-
-		document.write("Second Object Test: " + JSON.stringify(new mySecondTestObject()));
-
-
+		var myDiv = document.getElementByID("div1")
+		let style = window.getComputedStyle(myDiv);
+		style.textContent = "Hello, World!";
+        window.alert("border-bottom-right-radius: " + style.getPropertyValue("border-bottom-right-radius"));
+        window.alert("\nborder-bottom-left-radius: " + style.getPropertyValue("border-bottom-left-radius"));
+        window.alert("\nborder-top-right-radius: " + style.getPropertyValue("border-top-right-radius"));
+        window.alert("\nborder-top-left-radius: " + style.getPropertyValue("border-top-left-radius"));
 	</script>
 </head>
+<body>
+	<div id = "div1"> </div>
+    <div id = "div2"> </div>
+</body>
 </html>
