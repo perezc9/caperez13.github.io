@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Hour 13 Assignment </title>
+	<title>Animating a DOM Element</title>
 	<style>
 		#div1 {
 			width: 200px;
@@ -26,18 +26,18 @@
             border-top-right-radius: 200px 200px;
 			}
 	</style>
-	<script>
-		var myDiv = document.getElementByID("div1")
-		let style = window.getComputedStyle(myDiv);
-		style.textContent = "Hello, World!";
-        window.alert("border-bottom-right-radius: " + style.getPropertyValue("border-bottom-right-radius"));
-        window.alert("\nborder-bottom-left-radius: " + style.getPropertyValue("border-bottom-left-radius"));
-        window.alert("\nborder-top-right-radius: " + style.getPropertyValue("border-top-right-radius"));
-        window.alert("\nborder-top-left-radius: " + style.getPropertyValue("border-top-left-radius"));
-	</script>
 </head>
 <body>
 	<div id = "div1"> </div>
     <div id = "div2"> </div>
+    <script>
+		var myDiv = document.getElementById("div1");
+		let style = window.getComputedStyle(myDiv);
+        var myDiv2 = document.getElementById("div2");
+		let style2 = window.getComputedStyle(myDiv2);
+        
+        window.alert("I didn't know what type of ellictal, so I made both a circle and oval\n" + "oval:\n" + "border-bottom-right-radius: " + style.getPropertyValue("border-bottom-right-radius") + "\nborder-bottom-left-radius: " + style.getPropertyValue("border-bottom-left-radius") + "\nborder-top-right-radius: " + style.getPropertyValue("border-top-right-radius") + "\nborder-top-left-radius: " + style.getPropertyValue("border-top-left-radius") + "\n\ncircle:\n" + "border-bottom-right-radius: " + style2.getPropertyValue("border-bottom-right-radius") + "\nborder-bottom-left-radius: " + style2.getPropertyValue("border-bottom-left-radius") + "\nborder-top-right-radius: " + style2.getPropertyValue("border-top-right-radius") + "\nborder-top-left-radius: " + style2.getPropertyValue("border-top-left-radius"));
+        
+	</script>
 </body>
 </html>
