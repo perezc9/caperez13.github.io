@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Hour 17 Assignment </title>
+	<script>
+		var myObject = new Object();
+		myObject.days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+		myObject.months = ['January','Febuary','March','April','May','June','July', 'August', 'September', 'October', 'November', 'December'];
+		myObject.firstName = "Cesar";
+		myObject.lastName = "Perez";
+		myObject.age = 20;
+		myObject.sex = "male";
+		myObject.city = "Los Angeles";
+		myObject.state = "California";
+		myObject.college = "College of the Canyons";
+
+		document.write("First Object Test: " + JSON.stringify(myObject));
+        
+		document.write("\n\n\n");
+        
+		function mySecondTestObject() {
+			this.primaryColors = ['red', 'blue', 'yellow'];
+			this.secondaryColors = ['purple', 'green', 'orange'];
+			this.randomColors = ['pink', 'black', 'white', 'grey', 'baige'];
+			this.numbers =[0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+			this.upperLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+		}
+
+		document.write("Second Object Test: " + JSON.stringify(new mySecondTestObject()));
+
+
+	</script>
+</head>
+</html>
