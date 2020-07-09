@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Hour 17 Assignment </title>
+	<title> Hour 18 Assignment</title>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script>
-		var myObject = new Object();
-		myObject.days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-		myObject.months = ['January','Febuary','March','April','May','June','July', 'August', 'September', 'October', 'November', 'December'];
-		myObject.firstName = "Cesar";
-		myObject.lastName = "Perez";
-		myObject.age = 20;
-		myObject.sex = "male";
-		myObject.city = "Los Angeles";
-		myObject.state = "California";
-		myObject.college = "College of the Canyons";
-
-		document.write("First Object Test: " + JSON.stringify(myObject));
-        
-		document.write("\n\n\n");
-        
-		function mySecondTestObject() {
-			this.primaryColors = ['red', 'blue', 'yellow'];
-			this.secondaryColors = ['purple', 'green', 'orange'];
-			this.randomColors = ['pink', 'black', 'white', 'grey', 'baige'];
-			this.numbers =[0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-			this.upperLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-		}
-
-		document.write("Second Object Test: " + JSON.stringify(new mySecondTestObject()));
-
-
+		$(document).ready(function(){
+			function checkFields(){
+				return ($("#name").val() && $("#email").val());
+			}
+			$("#form1").submit(function(){
+				if(checkFields()){
+					$.post(
+						'test.php', $("#form1").serialize(),
+							function(data){
+								$("#div1").html(data);
+					}
+				);
+			}
+			else alert("Please fill in name and email fields!");
+			return false;
+			});
+		});
 	</script>
 </head>
+<body>
+	<form id="form1">
+		Name<input type="text" name="name" id="name"><br />
+		Email<input type="text" name="email" id="email"><br />
+		<input type="submit" name="submit" id="submit" value="Submit
+		Form">
+	</form>
+<div id="div1"></div>
+</body>
 </html>
