@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Hour 18 Assignment</title>
+	<title> Hour 17 Assignment</title>
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script>
 		$(document).ready(function(){
@@ -10,6 +10,7 @@
 			}
 			$("#form1").submit(function(){
 				if(checkFields()){
+					alert("Please fill in name and email fields!");
 					$.post(
 						'test.php', $("#form1").serialize(),
 							function(data){
