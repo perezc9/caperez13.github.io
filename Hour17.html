@@ -4,13 +4,14 @@
 	<title> EARHour 17 Assignment </title>
   <script src="jquery-latest.min.js"></script>
 	<script>
+    alert("PHP isn't functioning properly with gitHub, so printing is a bit off due to misinterpreting 'echo.' However, the requirements are still implemented. Input can not be empty or less than 4 characters.");
 		$(document).ready(function(){
 			function checkFields(){
-				return ($("#name").val() && $("#email").val().length && $("#name").val().length > 4 && $("#email").val().length > 4);
+				return ($("#name").val() && $("#email").val().length && $("#name").val().length > 3 && $("#email").val().length > 3);
 			}
 			$("#form1").submit(function(){
 				if(checkFields()){
-					$.post('test.php', $("#form1").serialize(), function(data) { $("#div1").html(data); } );
+					$.post('test.php', "HEEEEY", function(data){ $("#div1").html(data); } );
 			} else alert("Please fill in name and email fields! At least 4 characters each!");
 			return false;
 			});
