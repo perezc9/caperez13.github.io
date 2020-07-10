@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title> Hour 17 Assignment</title>
-	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<title> Hour 17 Assignment </title>
+  <script src="jquery-latest.min.js"></script>
 	<script>
 		$(document).ready(function(){
 			function checkFields(){
-				return ($("#name").val() && $("#email").val());
+				return ($("#name").val() && $("#email").val().length && $("#name").val().length > 4 && $("#email").val().length > 4);
 			}
 			$("#form1").submit(function(){
-				alert("Please fill in name and email fields!");
 				if(checkFields()){
 					$.post('test.php', $("#form1").serialize(), function(data) { $("#div1").html(data); } );
-			}
-			else alert("Please fill in name and email fields!");
+			} else alert("Please fill in name and email fields! At least 4 characters each!");
 			return false;
 			});
 		});
@@ -22,10 +19,10 @@
 </head>
 <body>
 	<form id="form1">
-		Name<input type="text" name="name" id="name"><br />
-		Email<input type="text" name="email" id="email"><br />
-		<input type="submit" name="submit" id="submit" value="Submit Form">
-	</form>
+    Name<input type="text" name="name" id="name"><br />
+    Email<input type="text" name="email" id="email"><br />
+    <input type="submit" name="submit" id="submit" value="Submit Form">
+  </form>
 	<div id="div1"></div>
 </body>
 </html>

@@ -1,10 +1,7 @@
-<html>
-<head>
-<title>Online PHP Script Execution</title>
-</head>
-<body>
 <?php
-echo "Name: " . $_REQUEST['name'] . "<br />Email: " . $_REQUEST['email'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $name = $_REQUEST['name'];
+  $email = $_REQUEST['email'];
+  echo "<br />Name: " . "$name" . "<br />Email: " . "$email";
+}
 ?>
-</body>
-</html>
